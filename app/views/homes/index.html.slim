@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html lang="en"
+  head
+    meta charset="UTF-8"/
+    meta name="viewport" content="width=, initial-scale=1.0"/
+    meta http-equiv="X-UA-Compatible" content="ie=edge"/
+    title Document
+    link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
+  body
+    .container
+      ul.nav.nav-tabs
+        li.nav-item
+          = link_to "ユーザー削除", "/users", method: :delete, class: "nav-link active"
+        li.nav-item
+          = link_to "投稿する", new_post_path, class: "nav-link"
+        li.nav-item
+          = link_to "投稿一覧", posts_path, class: "nav-link"
+        li.nav-item
+          = link_to "delete", "#", class: "nav-link"
+        li.nav-item
+          = link_to "sign_up", new_user_registration_path, class: "nav-link"
+        li.nav-item
+          = link_to "sign_in", new_user_session_path, class: "nav-link"  
+        li.nav-item
+          = link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link" 
+        li.nav-item
+          - if user_signed_in?
+            = current_user.name 
+      .row.mt-3
+        .box1.col-4(style="background-color: bisque") box1
+        .box2.col-8(style="background-color: darkkhaki") box2
+      .jumbotron(style="background-image: url('https://picsum.photos/1200/700');")
+        h1.display-4 Match Hike
+        p.lead 移動を共有する
+        hr.my-4
+        p aaaaaaaaa
+        = link_to "learn more", "#", class: "btn btn-primary btn-lg"   
+
+
+

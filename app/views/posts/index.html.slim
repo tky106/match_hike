@@ -1,0 +1,18 @@
+- @posts.each do |post| 
+  .status
+    = "title" + ":" + "#{post.title}" 
+    br
+    = "purpose" + ":" + "#{post.purpose}"
+    br
+    = "departure" + ":" + "#{post.departure}"
+    br
+    = "destination" + ":" + "#{post.destination}"   
+    br
+    = "people" + ":" + "#{post.people}"
+    br
+    = "condition" + ":" + "#{post.condition}"
+    br 
+    = "applicant" + ":" + "#{}"
+
+  .btn.show-btn
+    = link_to "show", "/posts/#{post.id}"  

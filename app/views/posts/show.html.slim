@@ -1,0 +1,25 @@
+.status
+  = "title" + ":" + "#{@post.title}" 
+  br
+  = "purpose" + ":" + "#{@post.purpose}"
+  br
+  = "departure" + ":" + "#{@post.departure}"
+  br
+  = "destination" + ":" + "#{@post.destination}"   
+  br
+  = "people" + ":" + "#{@post.people}"
+  br
+  = "condition" + ":" + "#{@post.condition}"
+
+.btn.index-btn
+  = link_to "index", posts_path 
+- if @post.contributor_id == current_user.id
+  .btn.edit-btn
+    = link_to "edit", edit_post_path
+  .btn.delete-btn
+    = link_to "delete", "/posts/#{@post.id}", method: :delete
+
+= simple_form_for @post, url: update_apply_post_path(@post) do |f|
+  .apply_btn(style="display: none;")
+    = f.input :applicant_id, value: "#{current_user.id}"
+  = f.submit "応募する" unless current_user.id == @post.contributor.id
