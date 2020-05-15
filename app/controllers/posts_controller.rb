@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :set_post, only: [:show, :edit, :update, :update_apply, :destroy]
+  before_action :set_post, only: [:show, :edit, :update_apply, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.applicants << current_user
   end
 
   def create
@@ -24,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def update_apply
-    @post.update(applicant_id: current_user.id) unless current_user.id == @post.contributor.id
+    @post.update(applicant_ids: current_user.id) unless current_user.id == @post.contributor.id
     redirect_to action: :index
   end
 
@@ -49,11 +50,11 @@ class PostsController < ApplicationController
   private
 
   def posts_params
-    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, :applicant_id).merge(contributor_id: current_user.id)
+    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, { :applicant_ids => [] }).merge(contributor_id: current_user.id)
   end
 
   def update_posts_params
-    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, :applicant_id)
+    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, { :applicant_ids => [] })
   end
 
   def set_post

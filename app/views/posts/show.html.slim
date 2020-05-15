@@ -10,6 +10,9 @@
   = "people" + ":" + "#{@post.people}"
   br
   = "condition" + ":" + "#{@post.condition}"
+  br
+  /- @post.applicants.each do |applicant|
+    = applicant.name
 
 .btn.index-btn
   = link_to "index", posts_path 
@@ -18,8 +21,23 @@
     = link_to "edit", edit_post_path
   .btn.delete-btn
     = link_to "delete", "/posts/#{@post.id}", method: :delete
-
 = simple_form_for @post, url: update_apply_post_path(@post) do |f|
-  .apply_btn(style="display: none;")
-    = f.input :applicant_id, value: "#{current_user.id}"
-  = f.submit "応募する" unless current_user.id == @post.contributor.id
+
+
+
+
+    / - post.applicants.each do |applicant|
+    /   = f.input :applicant_ids, name: "applicant[applicant_ids][]"
+
+/ = simple_form_for @post, url: update_apply_post_path(@post) do |f|
+/   - @post.applicants.each do |applicant|
+/     .apply_btn(style="display: none;")
+/       = f.input :post[applicant_ids][], value: "#{current_user.id}"
+/   = f.submit "応募する" unless current_user.id == @post.contributor.id
+
+/  =f.input :title
+/   =f.input :purpose
+/   =f.input :departure
+/   =f.input :destination
+/   =f.input :people
+/   =f.input :condition

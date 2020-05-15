@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }    
   root "homes#index"
+  resources :posts
   resources :posts do
     member do
       patch 'update_apply'
