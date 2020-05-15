@@ -1,18 +1,20 @@
 - @posts.each do |post| 
   .status
+    = "#{post.applicants.count}" + "/" + "#{post.people}"
+    br
     = "title" + ":" + "#{post.title}" 
     br
     = "purpose" + ":" + "#{post.purpose}"
     br
     = "departure" + ":" + "#{post.departure}"
     br
-    = "destination" + ":" + "#{post.destination}"   
+    = "destination" + ":" + "#{post.destination}"
     br
     = "people" + ":" + "#{post.people}"
     br
     = "condition" + ":" + "#{post.condition}"
-    br 
-    = "applicant" + ":" + "#{}"
-
+    br
+    - if post.applicants.count == post.people 
+      = "満室" 
   .btn.show-btn
     = link_to "show", "/posts/#{post.id}"  

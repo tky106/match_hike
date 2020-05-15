@@ -4,11 +4,11 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }    
   root "homes#index"
-  resources :posts
   resources :posts do
+    resources :talks, only: [:index, :create, :show]
     member do
       patch 'update_apply'
+      get "complete"
     end
   end
-  resources :talks
 end

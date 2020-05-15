@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :set_post, only: [:show, :edit, :update_apply, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update_apply, :complete, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -26,7 +26,11 @@ class PostsController < ApplicationController
 
   def update_apply
     @post.update(applicant_ids: current_user.id) unless current_user.id == @post.contributor.id
-    redirect_to action: :index
+    redirect_to complete_post_path
+  end
+
+  def complete
+
   end
 
   def edit
@@ -37,7 +41,7 @@ class PostsController < ApplicationController
     if @post.update(update_posts_params)
       redirect_to action: :index
     else
-      render action: :edit  
+      render action: :edit
     end
   end
 

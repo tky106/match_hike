@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   has_many :posts_users
   
+  has_many :talks
   has_many :applicants, class_name: "User", through: :posts_users
   belongs_to :contributor, class_name: "User"
   accepts_nested_attributes_for :posts_users, allow_destroy: true
