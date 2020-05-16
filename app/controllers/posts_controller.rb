@@ -33,6 +33,22 @@ class PostsController < ApplicationController
 
   end
 
+  def search
+    if params[:destination].present?
+      @posts = Post.where('destination LIKE ?', "%#{params[:destination]}%").order("created_at DESC")
+    elsif params[:departure].present?
+      @posts = Post.where('departure LIKE ?', "%#{params[:departure]}%").order("created_at DESC")
+    elsif params[:purpose].present?
+      @posts = Post.where('purpose LIKE ?', "%#{params[:purpose]}%").order("created_at DESC")
+    elsif params[:people].present?
+      @posts = Post.where('people LIKE ?', "%#{params[:people]}%").order("created_at DESC")
+    elsif params[:condition].present?
+      @posts = Post.where('condition LIKE ?', "%#{params[:condition]}%").order("created_at DESC")
+    else 
+      @posts = Post.none
+    end 
+  end
+
   def edit
     
   end

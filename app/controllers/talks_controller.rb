@@ -20,7 +20,7 @@ class TalksController < ApplicationController
   private
 
   def talk_params
-    params.require(:talk).permit(:talk).merge(user_id: current_user.id)
+    params.require(:talk).permit(:talk).merge(speaker_id: current_user.id)
   end
 
   def set_post

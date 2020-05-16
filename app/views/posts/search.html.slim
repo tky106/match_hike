@@ -1,0 +1,31 @@
+h1 目的地から探す
+= form_with url: search_posts_path, method: :get, local: true do |f|
+  h5 出発地
+  = f.text_field :departure
+  h5 目的地  
+  = f.text_field :destination
+  h5 目的
+  = f.text_field :purpose
+  h5 人数 
+  = f.number_field :people
+  h5 条件
+  = f.text_field :condition
+  = f.submit :search
+
+  
+  
+.post_block
+  - @posts.each do |post|
+    = "#{post.applicants.count}" + "/" + "#{post.people}"
+    br
+    = "title" + ":" + "#{post.title}" 
+    br
+    = "purpose" + ":" + "#{post.purpose}"
+    br
+    = "departure" + ":" + "#{post.departure}"
+    br
+    = "destination" + ":" + "#{post.destination}"   
+    br
+    = "people" + ":" + "#{post.people}"
+    br
+    = "condition" + ":" + "#{post.condition}"  
