@@ -1,18 +1,14 @@
 .status
-  = "#{@post.applicants.count}" + "/" + "#{@post.people}"
-  br
-  = "title" + ":" + "#{@post.title}" 
-  br
-  = "purpose" + ":" + "#{@post.purpose}"
-  br
-  = "departure" + ":" + "#{@post.departure}"
-  br
-  = "destination" + ":" + "#{@post.destination}"   
-  br
-  = "people" + ":" + "#{@post.people}"
-  br
-  = "condition" + ":" + "#{@post.condition}"
-  br
+
+  = simple_form_for @post,  html: { class: 'form-display' } do |f|
+    = "#{@post.applicants.count}/#{@post.people}"
+    = f.input :title, readonly: true
+    = f.input :purpose, readonly: true
+    = f.input :departure, readonly: true
+    = f.input :destination, readonly: true
+    = f.input :people, readonly: true
+    = f.input :condition, readonly: true
+    
   /- @post.applicants.each do |applicant|
     = applicant.name
 
@@ -28,6 +24,22 @@
     = "満室" 
   - elsif @post.applicants.count != @post.people && current_user.id != @post.contributor.id 
     = f.submit "応募する"
+
+  / = "#{@post.applicants.count}/#{@post.people}"
+  / br
+  / = "#{Post.human_attribute_name(:title)}:#{@post.title}" 
+  / br
+  / = "#{Post.human_attribute_name(:purpose)}:#{@post.purpose}"
+  / br
+  / = "#{Post.human_attribute_name(:departure)}:#{@post.departure}"
+  / br
+  / = "#{Post.human_attribute_name(:destination)}:#{@post.destination}"
+  / br
+  / = "#{Post.human_attribute_name(:people)}:#{@post.people}"
+  / br
+  / = "#{Post.human_attribute_name(:condition)}:#{@post.condition}"
+
+
 
 
 

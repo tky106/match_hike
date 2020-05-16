@@ -8,6 +8,9 @@ h2
     = f.input :password
     = f.input :password_confirmation
     = f.input :age
+    = f.input :occupation
+    = f.input :gender, as: :check_boxes, collection: [ ['男', 'male'],[ '女', 'female']], checked: 'male'
+    = f.input :image_url, as: :file
   .form-actions
     = f.button :submit, "Sign up"
 = render "users/shared/links"
