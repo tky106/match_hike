@@ -3,6 +3,7 @@ Rails.application.routes.draw do
       sessions: 'users/sessions',
       registrations: 'users/registrations'
   }    
+  resources :users, only: [:show]
   root "homes#index"
   resources :posts do
     resources :talks, only: [:index, :create, :show]

@@ -1,14 +1,20 @@
-- @posts.each do |post| 
-  = simple_form_for post, html: { class: 'form-display' } do |f|
-    = "#{post.applicants.count}/#{post.people}"
-    = f.input :title, readonly: true
-    = f.input :purpose, readonly: true
-    = f.input :departure, readonly: true
-    = f.input :destination, readonly: true
-    = f.input :people, readonly: true
-    = f.input :condition, readonly: true
-    
-    - if post.applicants.count == post.people 
-      = "満室" 
-  .btn.show-btn
-    = link_to "show", "/posts/#{post.id}"  
+.l-container
+  = render "shared/header"
+  .m-container.m-container--home 
+    h2 Recruitment
+    p 希望にあった募集を見つけよう
+  .contents 
+    - @posts.each do |post| 
+      = simple_form_for post, html: { class: 'form-display' } do |f|
+        = "#{post.applicants.count}/#{post.people}"
+        = f.input :title, readonly: true
+        = f.input :purpose, readonly: true
+        = f.input :departure, readonly: true
+        = f.input :destination, readonly: true
+        = f.input :people, readonly: true
+        = f.input :condition, readonly: true
+        
+        - if post.applicants.count == post.people 
+          = "満室" 
+      .btn.show-btn
+        = link_to "show", "/posts/#{post.id}"  

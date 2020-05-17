@@ -1,0 +1,86 @@
+.l-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f0f0ee;
+}
+
+.m-container {
+  // position: absolute;
+  // top: 0;
+  height: 500px;
+  text-align: center;
+  font-size: 90px;
+  font-weight: 900;
+  width: 100%;
+  display: block;
+  background-attachment: fixed;
+  // position: relative;
+  padding-top: 25%;
+  p {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+}
+// .m-container {
+//   height: 800px;
+//   width: 100%;
+//   position: relative;
+//   margin-right: auto;
+//   margin-left: auto;
+//   background-attachment: fixed;
+//   background-color: black;
+
+//   &__text {
+//     position: absolute;
+//     top: 15%;
+//     background-color: red;
+//     height: 70%;
+//     text-align: center;
+//     font-size: 90px;
+//     font-weight: 900;
+//     width: 100%;
+//     display: block;
+
+//   }
+// }
+
+// .s-container {
+//   margin-right: auto;
+//   margin-left: auto;
+//   width: 900px;
+//   height: 650px;
+//   position: absolute;
+//   top: 55%;
+//   left: 9%;
+//   transform: translateY(-50%);
+//   z-index: 8;
+//   // &__text {
+//     background-color: blue;
+  //   position: absolute;
+  //   height: 800px;
+  //   width: 1400px;
+  //   background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2016/04/14/929216/ba5df659a1e9d00aeda35a868f9973a5.jpg");
+  //   color: rgba(0,0,0,0);
+  //   -webkit-background-clip: text;
+  // }
+  // &__box {
+  //   background-color: white;
+  //   font-weight: 900;
+  //   border-radius: 45px;
+  //   padding: 40px;
+  //   width: 50%;
+  //   height: 7%;
+  //   margin-left: 21%;
+  //   margin-top: 20%;
+  //   z-index: 9;
+    //background-color: black;
+    //background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2016/04/14/929216/ba5df659a1e9d00aeda35a868f9973a5.jpg");
+    // color: rgba(0,0,0,0);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+//   }
+
+// }

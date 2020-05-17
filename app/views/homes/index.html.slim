@@ -1,35 +1,26 @@
-<!DOCTYPE html>
-html lang="en"
-  head
-    meta charset="UTF-8"/
-    meta name="viewport" content="width=, initial-scale=1.0"/
-    meta http-equiv="X-UA-Compatible" content="ie=edge"/
-    title Document
-     
-  body
-    .container
-      ul
-        li
-          = link_to "ユーザー削除", "/users", method: :delete
-        li
-          = link_to "投稿する", new_post_path
-        li
-          = link_to "投稿一覧", posts_path
-        li
-          = link_to "目的地から探す", search_posts_path
-        li
-          = link_to "sign_up", new_user_registration_path
-        li
-          = link_to "sign_in", new_user_session_path
-        li
-          = link_to "logout", destroy_user_session_path, method: :delete
-        li
-          - if user_signed_in?
-            = current_user.name 
-
-        h1 Match Hike
-        p 移動をシェアする
-
-
+.l-container
+  = render "shared/header"
+  .m-container.m-container--home 
+    h2 share the distance 
+    p「移動」をシェアしよう
+  .contents 
+    .content-title
+      h2 What's Match Hike?
+    .content-explain
+      p 目的地が同じ人同士のマッチングサービスです。
+      br win-winのヒッチハイクを提供します。
+    .content-title
+      h2 3ステップ  
+    .content-explain.content-explain--plural
+      .content-explain__single
+        h2 募集
+        p 出発地、目的地、条件等の募集要項を記入して投稿します。ユーザーからの応募を待ちましょう。
+      .content-explain__single
+        h2 応募
+        p 条件に合う投稿を探し出して応募します。応募人数が定員に達した場合、は応募できません。
+      .content-explain__single
+        h2 トーク
+        p 応募後、トーク画面でグループのユーザーとチャットができます。確定前に質問をしましょう。  
+  = render "shared/footer"
 
 

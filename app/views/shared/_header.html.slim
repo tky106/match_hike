@@ -1,0 +1,23 @@
+.header
+  .header-bar
+    .header-bar__left
+      = link_to root_path do 
+        h1 Match Hike
+    ul.header-bar__right
+      li
+        = link_to "投稿する", new_post_path 
+      li
+        = link_to "募集一覧", posts_path
+      li
+        = link_to "目的地から探す", search_posts_path
+      - if user_signed_in?
+        li
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+        li
+          = link_to "/users/#{current_user.id}" do
+            = "#{current_user.name}さん"   
+      - else
+        li
+          = link_to "ログイン", new_user_session_path 
+        li
+          = link_to "登録する", new_user_registration_path

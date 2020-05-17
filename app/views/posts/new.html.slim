@@ -1,9 +1,18 @@
-= simple_form_for @post do |f|
-  =f.input :title
-  =f.input :purpose
-  =f.input :departure
-  =f.input :destination
-  =f.input :people
-  =f.input :condition
+.l-container
+  = render "shared/header"
+  .m-container.m-container--home 
+    h2 Post
+    p 投稿を作ってホストになろう
+  .contents 
+      = simple_form_for @post do |f|
 
-  =f.submit
+        =f.input :title
+        =f.input :purpose
+        =f.input :departure
+        =f.input :destination
+        =f.input :people
+        =f.input :condition
+
+        =f.submit
+
+  = render "shared/footer"
