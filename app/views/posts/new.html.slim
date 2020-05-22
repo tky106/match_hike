@@ -1,18 +1,30 @@
+= javascript_include_tag 'post.js'
+
 .l-container
   = render "shared/header"
   .m-container.m-container--home 
     h2 Post
     p 投稿を作ってホストになろう
-  .contents 
-      = simple_form_for @post do |f|
+  .contents-pn
+    a.js-modal-open href="" 投稿する
+  .modal.js-modal
+    .modal-bg.js-modal-close
+    .modal-content
+      .modal-content__title
+        h1 Post Form
+        = simple_form_for @post do |f|
+          .modal-content__form
+            = f.input :title, input_html: { class: 'title' }
+            = f.input :purpose, input_html: { class: 'purpose' }
+            = f.input :departure, input_html: { class: 'departure' }
+            = f.input :destination, input_html: { class: "destination" }
+            = f.input :people, input_html: { class: 'people' }
+            = f.input :condition  , input_html: { class: 'condition' }
+          .modal-content__submit-form  
+            = f.submit "SUBMIT", class: "modal-content__submit-btn"
 
-        =f.input :title
-        =f.input :purpose
-        =f.input :departure
-        =f.input :destination
-        =f.input :people
-        =f.input :condition
-
-        =f.submit
+      a.js-modal-close href="" 閉じる
 
   = render "shared/footer"
+
+          / =f.submit

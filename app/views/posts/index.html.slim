@@ -1,20 +1,33 @@
 .l-container
   = render "shared/header"
-  .m-container.m-container--home 
+  .m-container.m-container--home
     h2 Recruitment
     p 希望にあった募集を見つけよう
-  .contents 
-    - @posts.each do |post| 
-      = simple_form_for post, html: { class: 'form-display' } do |f|
-        = "#{post.applicants.count}/#{post.people}"
-        = f.input :title, readonly: true
-        = f.input :purpose, readonly: true
-        = f.input :departure, readonly: true
-        = f.input :destination, readonly: true
-        = f.input :people, readonly: true
-        = f.input :condition, readonly: true
-        
-        - if post.applicants.count == post.people 
-          = "満室" 
-      .btn.show-btn
-        = link_to "show", "/posts/#{post.id}"  
+  .contents.contents--index
+    - @posts.each do |post|
+      .p-content
+        .p-content__title
+          = post.contributor.name
+          .p-content__number = "#{post.applicants.count}/#{post.people}"
+        .p-content__form
+          = simple_form_for post do |f|
+            = f.input :title, input_html: { class: 'i-title' }
+            = f.input :purpose, input_html: { class: 'i-purpose' }
+            = f.input :departure, input_html: { class: 'i-departure' }
+            = f.input :destination, input_html: { class: "i-destination" }
+            = f.input :people, input_html: { class: 'i-people' }
+            = f.input :condition  , input_html: { class: 'i-condition' }
+           
+            .p-content__submit-form
+              = link_to "show", "/posts/#{post.id}", class: "p-content__submit-btn"
+          .btn.show-btn
+              
+
+
+      / = simple_form_for post, html: { class: 'form-display' } do |f|
+            / = f.input :title
+            / = f.input :purpose
+            / = f.input :departure
+            / = f.input :destination
+            / = f.input :people
+            / = f.input :condition 

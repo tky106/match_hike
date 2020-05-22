@@ -3,7 +3,7 @@ class TalksController < ApplicationController
 
   def index
     @talk = Talk.new
-
+    @talks = @post.talks.includes(:speaker)
   end
 
   def show

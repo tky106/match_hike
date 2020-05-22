@@ -1,5 +1,15 @@
 ja:
-  activerecord:
-    attributes:
-      user:
-        name: 名前 
+  users:
+    edit:
+      id: ID
+      name: 名前
+      nickname: ニックネーム
+      email: メールアドレス
+      age: 年齢
+      password: パスワード
+      password_confirmation: パスワード（確認）
+      remember_me: 次回以降スキップ
+      gender: 性別
+      occupation: 職業 
+      image_url: プロフィール画像
+   

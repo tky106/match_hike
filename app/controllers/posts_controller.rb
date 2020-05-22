@@ -25,7 +25,12 @@ class PostsController < ApplicationController
   end
 
   def update_apply
-    @post.update(applicant_ids: current_user.id) unless current_user.id == @post.contributor.id
+    if @post.update(update_posts_params)
+      @post.applicants << current_user
+    end  
+    # @post.update(update_posts_params)
+    # @post.applicant_ids.append(current_user.id)
+    # @post.update(applicant_ids: current_user.id) unless current_user.id == @post.contributor.id
     redirect_to complete_post_path
   end
 
@@ -70,11 +75,11 @@ class PostsController < ApplicationController
   private
 
   def posts_params
-    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, { :applicant_ids => [] }).merge(contributor_id: current_user.id)
+    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, applicant_ids: []).merge(contributor_id: current_user.id)
   end
 
   def update_posts_params
-    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, { :applicant_ids => [] })
+    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :condition, applicant_ids: [] )
   end
 
   def set_post

@@ -1,19 +1,15 @@
 ja:
   activerecord:
-    models:
-      user: ユーザー 
-      comment: コメント
-      home: トップ
-      post: 投稿
-      talk: トーク
     attributes:
       user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: 次回から自動的にログイン
         id: ID
         name: 名前
-        email: メールアドレス
+        nickname: ニックネーム
         age: 年齢
-        password: パスワード
-        password_confirmation: パスワード（確認）
         remember_me: 次回以降スキップ
         gender: 性別
         occupation: 職業 
@@ -24,8 +20,28 @@ ja:
         departure: 出発地
         destination: 目的地
         people: 募集人数
-        condition: 条件
-  attributes:
-    created_at: 作成日
-    updated_at: 更新日      
+        condition: 条件  
+# ja:
+#   activerecord:
+#     models:
+#       user: ユーザー 
+#       comment: コメント
+#       home: トップ
+#       post: 投稿
+#       talk: トーク
+#     attributes:
+#       user:
+#         id: ID
+#         name: 名前
+#         nickname: ニックネーム
+#         email: メールアドレス
+#         age: 年齢
+#         password: パスワード
+#         password_confirmation: パスワード（確認）
+#         remember_me: 次回以降スキップ
+#         gender: 性別
+#         occupation: 職業 
+#         image_url: プロフィール画像
+
+   
           

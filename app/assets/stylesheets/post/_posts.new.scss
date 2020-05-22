@@ -1,0 +1,118 @@
+.contents-pn {
+  height: 500px;
+  background-color: white;
+  text-align: center;
+  position: relative;
+}
+
+.js-modal-open {
+  text-decoration: none;
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  font-size: 40px;
+  padding: 70px;
+  border-radius: 20px;
+  border: medium solid #000000;
+  color: rgb(0, 0, 0);
+}
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.modal-bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+
+}
+
+.modal-content{
+  background-color: white;
+  left: 50%;
+  padding: 40px;
+  height: 65vh;
+  position: absolute;
+  top: 55%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  text-align: center;
+  border-radius: 20px;
+
+  &__title {
+    font-size: 50px;
+  }
+
+  &__form {
+    font-size: 20px;
+    margin: 40px auto;
+    line-height: 50px;
+    width: 60%;
+    text-align: left;
+    
+    input {
+      width: 70%;
+      border-width: 0 0 2px 0;
+      border-radius:0px;
+      outline:none;
+      border-color: #000;
+      
+    }
+  }
+
+  &__submit-btn {
+    font-size: 30px;
+    line-height: 24px;
+    border-style: none;
+    margin-bottom: 30px;;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-weight: 100;
+    padding: 20px;
+  }
+}
+
+.js-modal-close {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.title, .purpose, .departure, .destination, .people, .condition {
+  // position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: text;
+  text-align: center;
+}
+
+.title {
+  margin-left: 60px;
+}
+
+.purpose {
+  margin-left: 104px;
+}
+
+.departure {
+  margin-left: 83px;
+}
+
+.destination {
+  margin-left: 84px;
+}
+
+.people {
+  margin-left: 62px;
+}
+
+.condition {
+  margin-left: 106px;
+}

@@ -1,0 +1,14 @@
+.contents__right-content--right-box__test-date data-id="#{talk.id}"
+  .contents__right-content--right-box__test-date--test
+    = talk.speaker.name
+  .contents__right-content--right-box__test-date--date 
+    = talk.created_at.strftime("%Y-%m-%d %H:%M")
+.contents__right-content--right-box__hello data-id="#{talk.id}"
+    p
+      = talk.talk
+
+
+
+/ = simple_form_for [@post, @talk] do |f|
+  / =f.input :talk
+  / =f.submit
