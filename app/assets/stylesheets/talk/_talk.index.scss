@@ -1,0 +1,110 @@
+.contents-ti {
+  height: 800px;
+  background-color: white;
+  position: relative;
+}
+
+.text-box {
+  background-color: #f0f0ee;
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+
+  &__form {
+    margin: 0 auto;
+    width: 85%;
+    // text-align: center;
+    position: relative;
+    color: #f0f0ee;
+   }
+  
+  &__input {
+    position: absolute;
+    top: 30%;
+    left: -5%;
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 30px;
+    outline: none;
+    padding: 10px;
+  }
+
+  &__submit {
+    width: 7%;
+    position: absolute;
+    top: 35%;
+    border-style: none;
+    right: 2%;
+    text-align: center;
+  }
+
+  &__send {
+    font-size: 19px;
+    border-radius: 50px;
+    background-color: white;
+  }
+}
+
+.group-info {
+  background-color: rgb(217, 255, 0);
+  position: absolute;
+  left: 0%;
+  width: 15%;
+  height: 83%;
+  padding: 20px;
+  border-radius: 5px;
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    color: black;
+    margin-top: 20px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__host {
+    margin-bottom: 40px;
+  }
+
+  &__member {
+
+  }
+}
+
+.talks {
+  overflow: scroll;
+  width: 75%;
+  padding: 30px;
+  position: absolute;
+  right: 0%;
+  height: 80%;
+}
+
+.talk-left {
+  background-color: rgb(217, 255, 0);
+  width: 20%;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+
+.talk-right {
+  background-color: rgb(217, 255, 0);
+  width: 20%;
+  padding: 20px;
+  border-radius: 40px;
+  margin: 0 0 30px auto;
+}
+
+.talk-box {
+  
+}

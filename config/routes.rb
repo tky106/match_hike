@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   root "homes#index"
   resources :posts do
     resources :talks, only: [:index, :create, :show]
+    namespace :api do
+      resources :talks, only: [:index], defaults: { format: 'json' }
+    end  
     member do
       patch 'update_apply'
       get "complete"

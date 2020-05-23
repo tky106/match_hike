@@ -1,14 +1,20 @@
-.contents__right-content--right-box__test-date data-id="#{talk.id}"
-  .contents__right-content--right-box__test-date--test
-    = talk.speaker.name
-  .contents__right-content--right-box__test-date--date 
-    = talk.created_at.strftime("%Y-%m-%d %H:%M")
-.contents__right-content--right-box__hello data-id="#{talk.id}"
-    p
-      = talk.talk
-
-
-
-/ = simple_form_for [@post, @talk] do |f|
-  / =f.input :talk
-  / =f.submit
+- if current_user.id == talk.speaker_id
+  .talk-box data-id="#{talk.id}" 
+    .talk-right 
+      p.talk-right__speaker
+        = talk.speaker.name
+      p.talk-right__date
+        = talk.created_at.strftime("%Y-%m-%d %H:%M")
+      p.talk-right__body
+        - if talk.talk.present?
+          = talk.talk
+- else
+  .talk-box data-id="#{talk.id}" 
+    .talk-left 
+      p.talk-left__speaker
+        = talk.speaker.name
+      p.talk-left__date
+        = talk.created_at.strftime("%Y-%m-%d %H:%M")
+      p.talk-left__body
+        - if talk.talk.present?
+          = talk.talk

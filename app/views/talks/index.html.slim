@@ -1,53 +1,42 @@
-.contents
-  .contents__left-content
-    .contents__left-content--left-header
-      p.contents__left-content--left-header__left-header-text 
-        = current_user.name
-      
-    / .contents__left-content--left-box
-    /   .contents__left-content--left-box__name 
-    /     = @post.title
-    /   .contents__left-content--left-box__message 
-    /     = @post.show_last_message  
-      //# %p.contents__left-content--left-box__sample-group sample-group
-      /# %p.contents__left-content--left-box__hello hello! 
-  .contents__right-content
-    .contents__right-content--right-header
-      .contents__right-content--right-header__test-edit 
-        .contents__right-content--right-header__test-edit--test 
-          = @post.title
-        
+= javascript_include_tag 'talk.js'
+
+.l-container
+  = render "shared/header"
+  .m-container.m-container--home 
+    h2 Talk Room
+    p 同乗者とチャットしよう
+  .contents-ti
+    .group-info
+      .group-info__title
+        = "タイトル : "
+        = link_to post_path(@post) do
+          p = @post.title
+      .group-info__host 
+        = "ホスト : "
+        = link_to user_path(@post.contributor) do
+          p = @post.contributor.name
+      .group-info__member  
+        = "メンバー : "
         - @post.applicants.each do |applicant|
-          p.contents__right-content--right-header__member  
-            = applicant.name
-          
-    .contents__right-content--right-box  
-      - @talks.each do |talk|
-        = render talk
-      /-# %div.contents__right-content--right-box__test-date
-      /-#   .contents__right-content--right-box__test-date--test test-user  
-      /-#   .contents__right-content--right-box__test-date--date 
-      /-# %p.contents__right-content--right-box__hello aa
-       
-      /-# %p.contents__right-content--right-box__test2 test-user
-      /-# %p.contents__right-content--right-box__date2 2019/09/29(Sun) 15:42:50 
-      /-# %p.contents__right-content--right-box__good-bye さようなら！
+          = link_to user_path(applicant) do
+            p = applicant.name
+    .talks  
+      = render @talks
+    = simple_form_for [@post, @talk], local: true do |f|
+      .text-box
+        .text-box__form
+          = f.input :talk, input_html: { class: 'text-box__input' }, placeholder: "type a message"
+        .text-box__submit
+          = f.submit "SEND", class: "text-box__send submit-btn"
 
-    .contents__right-content--form-box
-      
-      /-# %form(action="/")
-      = simple_form_for [@post, @talk] do |f|
-        .contents__right-content--form-box__form
-          .contents__right-content--form-box__form--text
-            /-# %input.initial-message(type="text" placeholder="type a message")
-            = f.input :talk, class: "initial-message", placeholder: "type a message"
-            = f.label :image do
-              / = fa_icon 'picture-o', class: "picture"
-              = f.file_field :image, class: "hidden"
-          .contents__right-content--form-box__form--submit   
-            /-# %input.send(type="submit" value="Send")
-            = f.submit "Send", class: "send"
 
-  = link_to "homeに戻る", root_path
+  / .contents__right-content--right-box__test-date data-id="#{talk.id}"
+  /   .contents__right-content--right-box__test-date--test
 
-            
+  / .contents__right-content--right-box__hello data-id="#{talk.id}"
+
+
+      / - @talks.each do |talk|
+      / = talk.speaker.name
+      / = talk.created_at.strftime("%Y-%m-%d %H:%M")
+      / = talk.talk

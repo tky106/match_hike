@@ -13,7 +13,10 @@ class TalksController < ApplicationController
   def create
     @talk = @post.talks.new(talk_params)
     if @talk.save
-      redirect_to post_talk_path(@post, @talk)
+      respond_to do |format|
+        format.html { redirect_to post_talks_path(params[:post_id]) }
+        format.json
+      end
     end
   end
 
