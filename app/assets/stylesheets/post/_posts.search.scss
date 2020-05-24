@@ -1,0 +1,17 @@
+.search-box {
+  background-color: rgb(255, 255, 255);
+
+  &__row {
+    display: table;
+    width: 100%;
+  }
+
+}
+
+.search-field {
+  display: table-cell;
+}
+
+.search-submit {
+  text-align: right;
+}

@@ -19,8 +19,8 @@ ja:
         purpose: 目的
         departure: 出発地
         destination: 目的地
+        conditions: 条件  
         people: 募集人数
-        condition: 条件  
 # ja:
 #   activerecord:
 #     models:

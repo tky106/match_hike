@@ -10,7 +10,7 @@
         = f.input :departure, input_html: { class: 'i-departure' }, readonly: true
         = f.input :destination, input_html: { class: "i-destination" }, readonly: true
         = f.input :people, input_html: { class: 'i-people' }, readonly: true
-        = f.input :condition  , input_html: { class: 'i-condition' }, readonly: true
+        = f.input :conditions, input_html: { class: 'i-conditions' }, readonly: true
         .p-content__submit-form
           - if @post.applicant_ids.include?(current_user.id)
             .btn.redirect-apply-btn
@@ -29,39 +29,3 @@
 
   .btn.delete-btn
     = link_to "delete", "/posts/#{@post.id}", method: :delete
-
-    / = f.submit "応募する"
-
-  / = "#{@post.applicants.count}/#{@post.people}"
-  / br
-  / = "#{Post.human_attribute_name(:title)}:#{@post.title}" 
-  / br
-  / = "#{Post.human_attribute_name(:purpose)}:#{@post.purpose}"
-  / br
-  / = "#{Post.human_attribute_name(:departure)}:#{@post.departure}"
-  / br
-  / = "#{Post.human_attribute_name(:destination)}:#{@post.destination}"
-  / br
-  / = "#{Post.human_attribute_name(:people)}:#{@post.people}"
-  / br
-  / = "#{Post.human_attribute_name(:condition)}:#{@post.condition}"
-
-
-
-
-
-    / - post.applicants.each do |applicant|
-    /   = f.input :applicant_ids, name: "applicant[applicant_ids][]"
-
-/ = simple_form_for @post, url: update_apply_post_path(@post) do |f|
-/   - @post.applicants.each do |applicant|
-/     .apply_btn(style="display: none;")
-/       = f.input :post[applicant_ids][], value: "#{current_user.id}"
-/   = f.submit "応募する" unless current_user.id == @post.contributor.id
-
-/  =f.input :title
-/   =f.input :purpose
-/   =f.input :departure
-/   =f.input :destination
-/   =f.input :people
-/   =f.input :condition

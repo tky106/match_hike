@@ -9,7 +9,7 @@
       li
         = link_to "募集一覧", posts_path
       li
-        = link_to "目的地から探す", search_posts_path
+        = link_to "キーワードから探す", search_posts_path
       - if user_signed_in?
         li
           = link_to "ログアウト", destroy_user_session_path, method: :delete
