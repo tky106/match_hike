@@ -51,7 +51,7 @@
 # ------------------------------------
 server "172.31.36.191",
   user: "takuya",
-  roles: %w{web db app},
+  roles: %w{web db app}
 #   ssh_options: {
 #     user: "user_name", # overrides user setting above
 #     keys: %w(/home/user_name/.ssh/id_rsa),
