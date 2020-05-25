@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: match_hike_production
-  username: match_hike
-  password: <%= ENV['MATCH_HIKE_DATABASE_PASSWORD'] %>
+  username: root
+  password:  
