@@ -16,7 +16,7 @@ set :deploy_to, "/var/www/match_hike"
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
-
+set :rbenv_ruby, '2.5.1'
 # Default value for :pty is false
 # set :pty, true
 
