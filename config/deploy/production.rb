@@ -52,10 +52,10 @@
 server "172.31.36.191",
   user: "takuya",
   roles: %w{web db app}
-#   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-#   }
+  ssh_options: {
+    user: "takuya", # overrides user setting above
+    keys: %w(/home/takuya/.ssh/match_hike_rsa),
+    forward_agent: true,
+    # auth_methods: %w(publickey password),
+    # password: 
+  }
