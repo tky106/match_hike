@@ -1,8 +1,9 @@
 # EC2サーバーのIP、EC2サーバーにログインするユーザー名、サーバーのロールを記述
 server '172.31.36.191', user: 'takuya', roles: %w{app db web} 
-
+set :rails_env, "production"
+set :unicorn_rack_env, "production"
 #デプロイするサーバーにsshログインする鍵の情報を記述
-set :ssh_options, keys: '~/.ssh/match_hike_key_rsa' 
+# set :ssh_options, keys: '~/.ssh/match_hike_key_rsa' 
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
