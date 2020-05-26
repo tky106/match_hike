@@ -1,3 +1,8 @@
+# EC2サーバーのIP、EC2サーバーにログインするユーザー名、サーバーのロールを記述
+server '00.00.000.000', user: 'naoki', roles: %w{app db web} 
+
+#デプロイするサーバーにsshログインする鍵の情報を記述
+set :ssh_options, keys: '~/.ssh/match_hike_key_rsa' 
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -49,11 +54,11 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-server "172.31.36.191",
-  user: "takuya",
-  roles: %w{web db app}
-  ssh_options: {
-    user: "takuya", # overrides user setting above
-    keys: %w(/home/takuya/.ssh/match_hike_rsa),
-    forward_agent: true
-  }
+# server "172.31.36.191",
+#   user: "takuya",
+#   roles: %w{web db app}
+#   ssh_options: {
+#     user: "takuya", # overrides user setting above
+#     keys: %w(/home/takuya/.ssh/match_hike_rsa),
+#     forward_agent: true
+#   }
