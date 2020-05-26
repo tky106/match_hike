@@ -55,7 +55,5 @@ server "172.31.36.191",
   ssh_options: {
     user: "takuya", # overrides user setting above
     keys: %w(/home/takuya/.ssh/match_hike_rsa),
-    forward_agent: true,
-    # auth_methods: %w(publickey password),
-    # password: 
+    forward_agent: true
   }
