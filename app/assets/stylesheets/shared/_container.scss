@@ -5,7 +5,13 @@
   margin-right: auto;
   margin-left: auto;
   background-color: #f0f0ee;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
+
+.l-container--pro {
+  background-color: rgb(217, 255, 0);
+}
+
 
 .m-container {
   height: 500px;
@@ -26,6 +32,44 @@
     background-color: #f0f0ee;
   }
 }
+
+.pro-top-content {
+  position: absolute;
+  top: 30%;
+  left: 38%;
+
+  &__name {
+    font-size: 30px;
+    margin-top: 35px;
+    background-color: rgb(217, 255, 0);
+    padding: 20px;
+    border-radius: 30px;
+    color: black;
+  }
+
+}
+
+.pro-disc-content {
+  height: 92vh;
+  
+  &__one {
+    background-color: white;
+    font-size: 30px;
+    padding: 40px;
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+
+    &--gender {
+      padding-left: 125px;
+    }
+  }
+}
+
+.pro-disc-edit-content {
+  height: 132vh;
+}
+
 // .m-container {
 //   height: 800px;
 //   width: 100%;

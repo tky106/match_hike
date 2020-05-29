@@ -1,0 +1,62 @@
+
+.pro-top {
+  background-color: #f0f0ee;
+  height: 60vh;
+  text-align: center;
+  position: relative;
+
+  &__edit {
+    position: absolute;
+    top: 80%;
+    right: 5%;
+  }
+}
+
+.pro-top-content-upload {
+  position: absolute;
+  top: 23%;
+  left: 35%;
+  color: #f0f0ee;
+}
+
+.upfile {
+  color: #f0f0ee;
+}
+
+
+.pro-status {
+  font-size: 30px;
+  outline: none;
+  border-style: none;
+
+  &__two {
+    margin-left: 300px;
+  }
+
+  &__five {
+    margin-left: 260px;
+    padding-right: 50px;
+  }
+
+  &__seven {
+    margin-left: 230px;
+    padding-right: 80px;
+  }
+
+  &__eight {
+    margin-left: 210px;
+    padding-right: 100px;
+  }
+
+}
+
+.pro-status__new {
+  font-size: 30px;
+}
+
+.pro-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
