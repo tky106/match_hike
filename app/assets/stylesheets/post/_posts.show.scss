@@ -2,13 +2,29 @@
   display: none;
 }
 
-.contents--show {
 
+.btn {
+  font-size: 15px;
+  line-height: 20px;
+  border-style: none;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-weight: 100;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 15px;
 }
 
-.p-content {
-  &--show {
-    margin: 80px auto;
-  }
+.full-btn {
+  height: 40px;
+  margin: 20px 0 0 0;
+  display: inline-block;
+  font-size: 20px;
 }
 
+.edit-btn  {
+  width: 30%;
+  margin-right: 20px;
+}

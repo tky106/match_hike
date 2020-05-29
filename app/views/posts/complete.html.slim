@@ -1,5 +1,6 @@
-h1 応募が完了しました。
-.btn.index-btn
-  = link_to "index", posts_path 
-.btn.redirect-apply-btn
-  = link_to "トーク画面へ行く", post_talks_path(@post)
+.complete-content
+  .complete-group
+    h1.apply-message 応募が完了しました。
+    .complete-redirect-btn
+      = link_to "一覧へ戻る", posts_path, class: "to-index" 
+      = link_to "トーク画面へ行く", post_talks_path(@post), class: "to-talk"

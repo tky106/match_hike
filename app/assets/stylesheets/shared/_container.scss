@@ -8,8 +8,6 @@
 }
 
 .m-container {
-  // position: absolute;
-  // top: 0;
   height: 500px;
   text-align: center;
   font-size: 90px;
@@ -17,11 +15,15 @@
   width: 100%;
   display: block;
   background-attachment: fixed;
-  // position: relative;
   padding-top: 25%;
+
   p {
     font-size: 50px;
     margin-top: 40px;
+  }
+
+  &--edit {
+    background-color: #f0f0ee;
   }
 }
 // .m-container {

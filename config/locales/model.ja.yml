@@ -13,7 +13,7 @@ ja:
         remember_me: 次回以降スキップ
         gender: 性別
         occupation: 職業 
-        image_url: プロフィール画像
+        image: プロフィール画像
       post: 
         title: タイトル
         purpose: 目的
@@ -21,27 +21,5 @@ ja:
         destination: 目的地
         conditions: 条件  
         people: 募集人数
-# ja:
-#   activerecord:
-#     models:
-#       user: ユーザー 
-#       comment: コメント
-#       home: トップ
-#       post: 投稿
-#       talk: トーク
-#     attributes:
-#       user:
-#         id: ID
-#         name: 名前
-#         nickname: ニックネーム
-#         email: メールアドレス
-#         age: 年齢
-#         password: パスワード
-#         password_confirmation: パスワード（確認）
-#         remember_me: 次回以降スキップ
-#         gender: 性別
-#         occupation: 職業 
-#         image_url: プロフィール画像
 
-   
           

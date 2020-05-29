@@ -1,7 +1,8 @@
 .contents--show
   .p-content.p-content--show
     .p-content__title
-      = @post.contributor.name
+      = image_tag "#{@post.contributor.image}", class: "pu_image"
+      p = @post.contributor.name
       .p-content__number = "#{@post.applicants.count}/#{@post.people}"
     .p-content__form
       = simple_form_for @post, url: update_apply_post_path(@post) do |f|
@@ -13,19 +14,13 @@
         = f.input :conditions, input_html: { class: 'i-conditions' }, readonly: true
         .p-content__submit-form
           - if @post.applicant_ids.include?(current_user.id)
-            .btn.redirect-apply-btn
-              = link_to "トーク画面へ行く", post_talks_path(@post) 
-          - elsif @post.applicants.count == @post.people && current_user.id != @post.contributor.id   
-            = "満室"   
+            .s-btn
+              = link_to "トーク画面へ行く", post_talks_path(@post), class: "btn"
+          - elsif @post.applicants.count == @post.people && current_user.id != @post.contributor.id  
+            p.full-btn 満室
           - elsif @post.applicants.count != @post.people && current_user.id != @post.contributor.id   
-            = f.submit "応募する", class: "p-content__submit-btn"
+            .s-btn
+              = f.submit "応募する", class: "btn"
           - elsif @post.contributor.id == current_user.id  
-            .btn.edit-btn
-              = link_to "edit", edit_post_path
-  
-      .btn.show-btn
-.btn.index-btn
-  = link_to "index", posts_path 
-
-  .btn.delete-btn
-    = link_to "delete", "/posts/#{@post.id}", method: :delete
+            .s-btn
+              = link_to "edit", edit_post_path, class: "btn"

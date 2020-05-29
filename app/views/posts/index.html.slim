@@ -7,7 +7,8 @@
     - @posts.each do |post|
       .p-content
         .p-content__title
-          = post.contributor.name
+          = image_tag "#{post.contributor.image}", class: "pu_image"
+          p = post.contributor.name
           .p-content__number = "#{post.applicants.count}/#{post.people}"
         .p-content__form
           = simple_form_for post do |f|
@@ -19,6 +20,5 @@
             = f.input :conditions, input_html: { class: 'i-conditions' }
            
             .p-content__submit-form
-              = link_to "show", "/posts/#{post.id}", class: "p-content__submit-btn"
-          .btn.show-btn
+              = link_to "show", "/posts/#{post.id}", class: "btn"
               

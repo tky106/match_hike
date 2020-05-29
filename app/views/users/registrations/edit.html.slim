@@ -13,7 +13,7 @@ h2
     = f.input :age
     = f.input :occupation
     = f.input :gender, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons
-    = f.input :image_url, as: :file
+    = f.input :image, as: :file
   .form-actions
     = f.button :submit, "Update"
 h3
@@ -22,21 +22,3 @@ p
   | Unhappy? 
   = link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete
 = link_to "Back", :back
-
-/ h2
-/   | 編集
-/ = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-/   = f.error_notification
-/   .form-inputs
-/     = f.input :name
-/     = f.input :nickname
-/     = f.input :email
-/     = f.input :password
-/     = f.input :password_confirmation
-/     = f.input :age
-/     = f.input :occupation
-/     = f.input :gender, as: :radio_buttons, collection: [ ['男', true],[ '女', false]]
-/     = f.input :image_url, as: :file
-/   .form-actions
-/     = f.button :submit, "保存する"
-/ = render "users/shared/links"

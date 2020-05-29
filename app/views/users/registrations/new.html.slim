@@ -9,9 +9,10 @@ h2
     = f.input :password
     = f.input :password_confirmation
     = f.input :age
+    = f.input :image, as: :file
     = f.input :occupation
     = f.input :gender, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons
-    = f.input :image_url, as: :file
+
   .form-actions
     = f.button :submit, "Sign up"
 = render "users/shared/links"

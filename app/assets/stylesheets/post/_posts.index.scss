@@ -1,63 +1,8 @@
-.contents--index {
-  display: flex;
-  flex-wrap:wrap;
-}
-.p-content{
-  margin: 30px 0 0 27px;
-  padding: 20px;
-  width: 27%;
-  height: 30%;
-  text-align: center;
-  border-radius: 20px;
-  border: medium solid black;
-
-  &__title {
-    font-size: 30px;
-    position: relative;
-  }
-
-  &__number {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 20px;
-  }
-
-  &__form {
-    font-size: 15px;
-    margin: 10px auto;
-    line-height: 10px;
-    width: 90%;
-    text-align: left;
-    
-    input {
-      width: 70%;
-      border-width: 0 0 2px 0;
-      outline:none;
-      font-size: 16px;
-      border-color: #000;
-      margin-top: 15px;
-      text-align: center;
-    }
-  }
-
-  &__submit-btn {
-    font-size: 15px;
-    line-height: 20px;
-    border-style: none;
-    text-decoration: none;
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    font-weight: 100;
-    border-radius: 20px;
-    padding: 10px;
-    margin-top: 15px;
-  }
-  &__submit-form {
-    text-align: center;
-    margin-top: 35px;
-  }
+.pu_image {
+  border-radius: 50%;
+  border:  rgb(217, 255, 0) 4px solid;
+  width: 70px;
+  height: 70px;
 }
 
 .i-title {
