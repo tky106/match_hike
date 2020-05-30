@@ -32,42 +32,7 @@ $(document).on('turbolinks:load', function() {
                     </div>
                   </div>`
     return html_l;
-  }                 
-// $(document).on('turbolinks:load', function() {
-//   function buildHTML(talk) {
-//     // if (talk.user_id == talk.speaker_id) {
-//     var content = talk.talk
-//     var html = `<div class="talk-box" data-id="${talk.id}">
-//                   <div class="talk-right">
-//                     <p class="talk-right__speaker">
-//                       ${talk.speaker_name}
-//                     </p>
-//                     <p class="talk-right__date">
-//                       ${talk.date}
-//                     </p>
-//                     <p class="talk-right__body">
-//                       ${content}
-//                     </p>
-//                   </div>
-//                 </div>`
-//     // } else {
-//       var content = talk.talk
-//       var html = `<div class="talk-box" data-id="${talk.id}">
-//                     <div class="talk-left">
-//                       <p class="talk-left__speaker">
-//                         ${talk.speaker_name}
-//                       </p>
-//                       <p class="talk-left__date">
-//                         ${talk.date}
-//                       </p>
-//                       <p class="talk-left__body">
-//                         ${content}
-//                       </p>
-//                     </div>
-//                   </div>`
-//     // }
-//     return html;
-//   }  
+  }                   
 
   var reloadTalks = function() {
     if(window.location.href.match(/\/posts\/\d+\/talks/)){
@@ -85,7 +50,6 @@ $(document).on('turbolinks:load', function() {
         html_l = buildHTMLl(talk)
         $(".talks").append(html_l);
       })
-      // $(".talks").animate({scrollTop: $(".talks")[0].scrollHeight});
     })
     .fail(function() {
       alert('error');
@@ -104,7 +68,7 @@ $(document).on('turbolinks:load', function() {
   $('#new_talk').on('submit', function(e){
     e.preventDefault();
     var talk = new FormData(this);
-    var url = $(this).attr('action'); // でも可能です
+    var url = $(this).attr('action'); 
     $.ajax({  
       url: url,
       type: 'POST',
@@ -112,7 +76,7 @@ $(document).on('turbolinks:load', function() {
       dataType: 'json',
       processData: false,
       contentType: false
-    }) //フォームに入力した値を取得しています。
+    })
     .done(function(data){
       console.log(data);
       var html_r = buildHTMLr(data);
@@ -125,7 +89,7 @@ $(document).on('turbolinks:load', function() {
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
     .always(function(data){
-      $('.submit-btn').prop('disabled', false);//ここで解除している
+      $('.submit-btn').prop('disabled', false);
     })
   })
   setInterval(reloadTalks, 1000);

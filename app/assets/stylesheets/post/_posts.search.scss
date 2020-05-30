@@ -1,17 +1,39 @@
 .search-box {
   background-color: rgb(255, 255, 255);
+  padding: 60px;
 
   &__row {
     display: table;
     width: 100%;
+    padding: 10px;
   }
 
 }
 
 .search-field {
   display: table-cell;
+  font-size: 30px;
+  
+  h5 {
+    background-color: rgb(217, 255, 0);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.search-input {
+  font-size: 20px;
+  margin-top: 30px;
+  border-width: 0 0 2px 0;
+  outline: none;
+  border: middle 4px solid;
+  border-color: black;
 }
 
 .search-submit {
-  text-align: right;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
 }

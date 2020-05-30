@@ -16,15 +16,58 @@
 .m-container {
   height: 500px;
   text-align: center;
-  font-size: 90px;
   font-weight: 900;
   width: 100%;
   display: block;
   background-attachment: fixed;
-  padding-top: 25%;
+  background-size: cover;
+  color: rgba(0,0,0,0);
+  -webkit-background-clip: text;
+
+  &--home {
+    background-image: url("/assets/home.jpg");
+    padding-bottom: 40%;
+    padding-top: 7%;
+    line-height: 230px;
+    font-size: 250px;
+  }
+
+  &--post {
+    background-image: url("/assets/post1.jpg");
+    padding-bottom: 20%;
+    padding-top: 15%;
+    font-size: 400px;
+  }
+
+  &--recruit {
+    background-image: url("/assets/recruit1.jpg");
+    padding-bottom: 20%;
+    padding-top: 15%;
+    font-size: 400px;
+  }
+
+  &--search {
+    background-image: url("/assets/home1.jpg");
+    padding-bottom: 20%;
+    padding-top: 15%;
+    font-size: 400px;
+  }
+
+  &--edit {
+    padding-bottom: 20%;
+    padding-top: 15%;
+    font-size: 400px;
+  }
+
+  &--talk {
+    background-image: url("/assets/talk.jpg");
+    padding-bottom: 7%;
+    padding-top: 20%;
+    font-size: 280px;
+  }
 
   p {
-    font-size: 50px;
+    font-size: 70px;
     margin-top: 40px;
   }
 
@@ -69,64 +112,3 @@
 .pro-disc-edit-content {
   height: 132vh;
 }
-
-// .m-container {
-//   height: 800px;
-//   width: 100%;
-//   position: relative;
-//   margin-right: auto;
-//   margin-left: auto;
-//   background-attachment: fixed;
-//   background-color: black;
-
-//   &__text {
-//     position: absolute;
-//     top: 15%;
-//     background-color: red;
-//     height: 70%;
-//     text-align: center;
-//     font-size: 90px;
-//     font-weight: 900;
-//     width: 100%;
-//     display: block;
-
-//   }
-// }
-
-// .s-container {
-//   margin-right: auto;
-//   margin-left: auto;
-//   width: 900px;
-//   height: 650px;
-//   position: absolute;
-//   top: 55%;
-//   left: 9%;
-//   transform: translateY(-50%);
-//   z-index: 8;
-//   // &__text {
-//     background-color: blue;
-  //   position: absolute;
-  //   height: 800px;
-  //   width: 1400px;
-  //   background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2016/04/14/929216/ba5df659a1e9d00aeda35a868f9973a5.jpg");
-  //   color: rgba(0,0,0,0);
-  //   -webkit-background-clip: text;
-  // }
-  // &__box {
-  //   background-color: white;
-  //   font-weight: 900;
-  //   border-radius: 45px;
-  //   padding: 40px;
-  //   width: 50%;
-  //   height: 7%;
-  //   margin-left: 21%;
-  //   margin-top: 20%;
-  //   z-index: 9;
-    //background-color: black;
-    //background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2016/04/14/929216/ba5df659a1e9d00aeda35a868f9973a5.jpg");
-    // color: rgba(0,0,0,0);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-//   }
-
-// }

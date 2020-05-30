@@ -1,28 +1,19 @@
-# capistranoのバージョン固定
 lock "~> 3.14.0"
 
-# デプロイするアプリケーション名
 set :application, 'match_hike'
 
-# cloneするgitのレポジトリ
 set :repo_url, 'git@github.com:tky106/match_hike.git'
 
-# deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, 'master'
-
-# deploy先のディレクトリ。 
+ 
 set :deploy_to, '/var/www/rails/match_hike'
 
-# シンボリックリンクをはるファイル。(※後述)
 set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
 
-# シンボリックリンクをはるフォルダ。(※後述)
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
-# 保持するバージョンの個数(※後述)
 set :keep_releases, 5
 
-# rubyのバージョン
 set :rbenv_ruby, '2.5.1'
 set :rbenv_type, :user
 
@@ -30,7 +21,6 @@ set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/match_hike.pem']  
 
 
-#出力するログのレベル。
 set :log_level, :debug
 
 namespace :deploy do

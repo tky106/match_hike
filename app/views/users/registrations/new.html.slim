@@ -9,34 +9,16 @@
       .pro-top-content-upload
         = f.input :image, input_html: { class: 'upfile' }, as: :file
       .pro-disc-content__one
-        = f.input :name, input_html: { class: 'pro-status__two' }
+        = f.input :name, input_html: { class: 'pro-status pro-status__two' }
       .pro-disc-content__one
-        = f.input :email, input_html: { class: 'pro-status__seven' }
+        = f.input :email, input_html: { class: 'pro-status pro-status__seven' }
       .pro-disc-content__one
-        = f.input :occupation, input_html: { class: 'pro-status__two' }
+        = f.input :occupation, input_html: { class: 'pro-status pro-status__two' }
       .pro-disc-content__one.pro-disc-content__one--gender
-        = f.input :gender, input_html: { class: 'pro-status__two' }, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons
+        = f.input :gender, input_html: { class: 'pro-status pro-status__two' }, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons
       .pro-disc-content__one
-        = f.input :age, input_html: { class: 'pro-status__two' }
+        = f.input :age, input_html: { class: 'pro-status pro-status__two' }
       .pro-disc-content__one
-        = f.input :password, input_html: { class: 'pro-status__five' }
+        = f.input :password, input_html: { class: 'pro-status pro-status__five' }
       .pro-disc-content__one
-        = f.input :password_confirmation, input_html: { class: 'pro-status__eight' }
-/ h2
-/   | Sign up
-/ = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-/   = f.error_notification
-/   .form-inputs
-/     = f.input :name
-/     = f.input :nickname
-/     = f.input :email
-/     = f.input :password
-/     = f.input :password_confirmation
-/     = f.input :age
-/     = f.input :image, as: :file
-/     = f.input :occupation
-/     = f.input :gender, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons
-
-/   .form-actions
-/     = f.button :submit, "Sign up"
-/ = render "users/shared/links"
+        = f.input :password_confirmation, input_html: { class: 'pro-status pro-status__eight' }

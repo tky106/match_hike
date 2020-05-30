@@ -3,10 +3,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :file
-  # storage :fog
-  # def default_url(*args)
-  #   "/image/23/" + [thumb20, "default.png"].compact.join('_')
-  # end
   def default_url(*args)
     "default.jpg"
   end

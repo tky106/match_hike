@@ -1,45 +1,43 @@
 .l-container
   = render "shared/header"
-  .m-container.m-container--home 
+  .m-container.m-container--search
     h2 Search
     p ワード検索で募集を探そう
   .search-box  
-    .search-box__title
-      h1 キーワード検索
     = form_with url: search_posts_path, method: :get, local: true do |f|
       .search-box__row
         .search-field
           h5 出発地
-          = f.text_field :departure
+          = f.text_field :departure, class: 'search-input'
         .search-field  
           h5 目的地  
-          = f.text_field :destination
+          = f.text_field :destination, class: 'search-input'
         .search-field  
           h5 目的
-          = f.text_field :purpose
+          = f.text_field :purpose, class: 'search-input'
         .search-field  
           h5 条件
-          = f.text_field :conditions
+          = f.text_field :conditions, class: 'search-input'
         .search-field  
           h5 人数 
-          = f.number_field :people
-      .search-submit  
-        = f.submit :search
-  .contents.contents--index
+          = f.number_field :people, class: 'search-input'
+        = f.submit :search, class: 'search-submit'
+  .contents-search
     - @posts.each do |post|
       .p-content
         .p-content__title
-          = post.contributor.name
+          = image_tag "#{post.contributor.image}", class: "pu_image"
+          = link_to user_path(post.contributor), class: "post-link" do
+            p = post.contributor.name
           .p-content__number = "#{post.applicants.count}/#{post.people}"
         .p-content__form
           = simple_form_for post do |f|
-            = f.input :title, input_html: { class: 'i-title' }
-            = f.input :purpose, input_html: { class: 'i-purpose' }
-            = f.input :departure, input_html: { class: 'i-departure' }
-            = f.input :destination, input_html: { class: "i-destination" }
-            = f.input :people, input_html: { class: 'i-people' }
-            = f.input :conditions, input_html: { class: 'i-conditions' }
+            = f.input :title, input_html: { class: 'i-title' }, readonly: true
+            = f.input :purpose, input_html: { class: 'i-purpose' }, readonly: true
+            = f.input :departure, input_html: { class: 'i-departure' }, readonly: true
+            = f.input :destination, input_html: { class: "i-destination" }, readonly: true
+            = f.input :people, input_html: { class: 'i-people' }, readonly: true
+            = f.input :conditions, input_html: { class: 'i-conditions' }, readonly: true
            
             .p-content__submit-form
-              = link_to "show", "/posts/#{post.id}", class: "p-content__submit-btn"
-          .btn.show-btn
+              = link_to "show", "/posts/#{post.id}", class: "btn"

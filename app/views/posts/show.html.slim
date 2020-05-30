@@ -2,7 +2,8 @@
   .p-content.p-content--show
     .p-content__title
       = image_tag "#{@post.contributor.image}", class: "pu_image"
-      p = @post.contributor.name
+      = link_to user_path(@post.contributor), class: "post-link" do
+        p = @post.contributor.name
       .p-content__number = "#{@post.applicants.count}/#{@post.people}"
     .p-content__form
       = simple_form_for @post, url: update_apply_post_path(@post) do |f|
