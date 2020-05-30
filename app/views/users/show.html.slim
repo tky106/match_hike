@@ -1,20 +1,20 @@
 .l-container.l-container--pro 
   = render "/shared/header"
   .pro-top
-    = link_to "編集する", edit_user_registration_path(current_user), class: "btn pro-top__edit"
+    = link_to "編集する", edit_user_registration_path(@user), class: "btn pro-top__edit"
     .pro-top-content
-      = image_tag "#{current_user.image}", class: "pro-image"
+      = image_tag "#{@user.image}", class: "pro-image"
       .pro-top-content__name
-        p = current_user.name
+        p = @user.name
   .pro-disc-content
-    = simple_form_for current_user do |f|
+    = simple_form_for @user do |f|
       .pro-disc-content__one
-        = f.input :name, input_html: { class: 'pro-status pro-status__two' }, readonly: true
+        = f.input :name, input_html: { class: 'pro-show pro-status__two' }, readonly: true
       .pro-disc-content__one
-        = f.input :email, input_html: { class: 'pro-status pro-status__seven' }, readonly: true
+        = f.input :email, input_html: { class: 'pro-show pro-status__seven' }, readonly: true
       .pro-disc-content__one
-        = f.input :occupation, input_html: { class: 'pro-status pro-status__two' }, readonly: true
+        = f.input :occupation, input_html: { class: 'pro-show pro-status__two' }, readonly: true
       .pro-disc-content__one.pro-disc-content__one--gender
-        = f.input :gender, input_html: { class: 'pro-status pro-status__two' }, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons, disabled: true
+        = f.input :gender, input_html: { class: 'pro-show pro-status__two' }, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons, disabled: true
       .pro-disc-content__one
-        = f.input :age, input_html: { class: 'pro-status pro-status__two' }, readonly: true
+        = f.input :age, input_html: { class: 'pro-show pro-status__two' }, readonly: true

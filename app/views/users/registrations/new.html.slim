@@ -9,19 +9,19 @@
       .pro-top-content-upload
         = f.input :image, input_html: { class: 'upfile' }, as: :file
       .pro-disc-content__one
-        = f.input :name, input_html: { class: 'pro-status__new pro-status__two' }
+        = f.input :name, input_html: { class: 'pro-status__two' }
       .pro-disc-content__one
-        = f.input :email, input_html: { class: 'pro-status__new pro-status__seven' }
+        = f.input :email, input_html: { class: 'pro-status__seven' }
       .pro-disc-content__one
-        = f.input :occupation, input_html: { class: 'pro-status__new pro-status__two' }
+        = f.input :occupation, input_html: { class: 'pro-status__two' }
       .pro-disc-content__one.pro-disc-content__one--gender
-        = f.input :gender, input_html: { class: 'pro-status__new pro-status__two' }, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons
+        = f.input :gender, input_html: { class: 'pro-status__two' }, collection: [ ['男', 'true'],[ '女', 'false']], as: :radio_buttons
       .pro-disc-content__one
-        = f.input :age, input_html: { class: 'pro-status__new pro-status__two' }
+        = f.input :age, input_html: { class: 'pro-status__two' }
       .pro-disc-content__one
-        = f.input :password, input_html: { class: 'pro-status__new pro-status__five' }
+        = f.input :password, input_html: { class: 'pro-status__five' }
       .pro-disc-content__one
-        = f.input :password_confirmation, input_html: { class: 'pro-status__new pro-status__eight' }
+        = f.input :password_confirmation, input_html: { class: 'pro-status__eight' }
 / h2
 /   | Sign up
 / = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|

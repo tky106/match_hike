@@ -28,15 +28,3 @@
           = f.input :talk, input_html: { class: 'text-box__input' }, placeholder: "type a message"
         .text-box__submit
           = f.submit "SEND", class: "text-box__send submit-btn"
-
-
-  / .contents__right-content--right-box__test-date data-id="#{talk.id}"
-  /   .contents__right-content--right-box__test-date--test
-
-  / .contents__right-content--right-box__hello data-id="#{talk.id}"
-
-
-      / - @talks.each do |talk|
-      / = talk.speaker.name
-      / = talk.created_at.strftime("%Y-%m-%d %H:%M")
-      / = talk.talk
