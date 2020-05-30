@@ -13,6 +13,16 @@
           h5 目的地  
           = f.text_field :destination, class: 'search-input'
         .search-field  
+          h5 制限 
+          = f.text_field :restriction, class: 'search-input'
+        .search-field  
+          h5 移動日 
+          = f.text_field :start, class: 'search-input'
+      .search-box__row
+        .search-field  
+          h5 移動手段
+          = f.text_field :transportation, class: 'search-input'
+        .search-field  
           h5 目的
           = f.text_field :purpose, class: 'search-input'
         .search-field  
@@ -21,6 +31,7 @@
         .search-field  
           h5 人数 
           = f.number_field :people, class: 'search-input'
+      .search-box__submit    
         = f.submit :search, class: 'search-submit'
   .contents-search
     - @posts.each do |post|
@@ -33,11 +44,9 @@
         .p-content__form
           = simple_form_for post do |f|
             = f.input :title, input_html: { class: 'i-title' }, readonly: true
-            = f.input :purpose, input_html: { class: 'i-purpose' }, readonly: true
             = f.input :departure, input_html: { class: 'i-departure' }, readonly: true
             = f.input :destination, input_html: { class: "i-destination" }, readonly: true
-            = f.input :people, input_html: { class: 'i-people' }, readonly: true
+            = f.input :start, input_html: { class: "i-start" }, readonly: true
             = f.input :conditions, input_html: { class: 'i-conditions' }, readonly: true
-           
             .p-content__submit-form
               = link_to "show", "/posts/#{post.id}", class: "btn"

@@ -3,7 +3,7 @@ ja:
     edit:
       id: ID
       name: 名前
-      nickname: ニックネーム
+      sns: SNSリンク
       email: メールアドレス
       age: 年齢
       password: パスワード

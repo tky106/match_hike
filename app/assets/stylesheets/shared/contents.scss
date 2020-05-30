@@ -16,7 +16,7 @@
   display: flex;
   flex-wrap:wrap;
   background-color: white;
-  padding: 30px;
+  padding: 20px;
 }
 
 .post-link {
@@ -33,7 +33,7 @@
   margin: 30px 0 0 27px;
   padding: 20px;
   width: 27%;
-  height: 30%;
+  height: 27%;
   text-align: center;
   border-radius: 20px;
   border: medium solid black;
@@ -48,7 +48,7 @@
     position: absolute;
     top: 20%;
     left: 30%;
-    height: 43%;
+    height: 53%;
     background-color: white;
   }
 
@@ -97,4 +97,41 @@
   height: 100vh;
   position: relative;
   text-align: center;
+}
+
+.pro-top-content {
+  position: absolute;
+  top: 30%;
+  left: 38%;
+
+  &__name {
+    font-size: 30px;
+    margin-top: 35px;
+    background-color: rgb(217, 255, 0);
+    padding: 20px;
+    border-radius: 30px;
+    color: black;
+  }
+
+}
+
+.pro-disc-content {
+  height: 110vh;
+  
+  &__one {
+    background-color: white;
+    font-size: 30px;
+    padding: 40px;
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+
+    &--gender {
+      padding-left: 125px;
+    }
+  }
+}
+
+.pro-disc-edit-content {
+  height: 150vh;
 }

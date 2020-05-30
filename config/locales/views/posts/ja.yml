@@ -5,6 +5,9 @@ ja:
       purpose: 目的
       departure: 出発地
       destination: 目的地
+      restriction: 制限
+      start: 移動日
+      transportation: 移動手段 
       conditions: 条件
       people: 募集人数
     show:

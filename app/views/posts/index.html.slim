@@ -14,11 +14,9 @@
         .p-content__form
           = simple_form_for post do |f|
             = f.input :title, input_html: { class: 'i-title' }, readonly: true
-            = f.input :purpose, input_html: { class: 'i-purpose' }, readonly: true
             = f.input :departure, input_html: { class: 'i-departure' }, readonly: true
             = f.input :destination, input_html: { class: "i-destination" }, readonly: true
-            = f.input :people, input_html: { class: 'i-people' }, readonly: true
+            = f.input :start, input_html: { class: "i-start" }, readonly: true
             = f.input :conditions, input_html: { class: 'i-conditions' }, readonly: true
-           
             .p-content__submit-form
-              = link_to "show", "/posts/#{post.id}", class: "btn"
+              = link_to "show", "/posts/#{post.id}", class: "btn"          

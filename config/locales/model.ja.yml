@@ -8,7 +8,7 @@ ja:
         remember_me: 次回から自動的にログイン
         id: ID
         name: 名前
-        nickname: ニックネーム
+        sns: SNSリンク
         age: 年齢
         remember_me: 次回以降スキップ
         gender: 性別
@@ -19,5 +19,8 @@ ja:
         purpose: 目的
         departure: 出発地
         destination: 目的地
+        restriction: 制限
+        start: 移動日
+        transportation: 移動手段
         conditions: 条件  
         people: 募集人数

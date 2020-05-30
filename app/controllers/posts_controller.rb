@@ -46,6 +46,12 @@ class PostsController < ApplicationController
       @posts = Post.where('people LIKE ?', "%#{params[:people]}%").order("created_at DESC")
     elsif params[:conditions].present?
       @posts = Post.where('conditions LIKE ?', "%#{params[:conditions]}%").order("created_at DESC")  
+    elsif params[:restriction].present?
+      @posts = Post.where('restriction LIKE ?', "%#{params[:restriction]}%").order("created_at DESC")
+    elsif params[:start].present?
+      @posts = Post.where('start LIKE ?', "%#{params[:start]}%").order("created_at DESC")
+    elsif params[:transportation].present?
+      @posts = Post.where('transportation LIKE ?', "%#{params[:transportation]}%").order("created_at DESC")      
     else 
       @posts = Post.none
     end 
@@ -72,11 +78,11 @@ class PostsController < ApplicationController
   private
 
   def posts_params
-    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :conditions, applicant_ids: []).merge(contributor_id: current_user.id)
+    params.require(:post).permit(:title, :purpose, :departure, :destination, :restriction, :start, :transportation, :people, :conditions, applicant_ids: []).merge(contributor_id: current_user.id)
   end
 
   def update_posts_params
-    params.require(:post).permit(:title, :purpose, :departure, :destination, :people, :conditions, applicant_ids: [] )
+    params.require(:post).permit(:title, :purpose, :departure, :destination, :restriction, :start, :transportation, :people, :conditions, applicant_ids: [] )
   end
 
   def set_post

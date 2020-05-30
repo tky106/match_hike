@@ -37,8 +37,8 @@
 .modal-content{
   background-color: white;
   left: 50%;
-  padding: 40px;
-  height: 65vh;
+  padding: 10px;
+  height: 80vh;
   position: absolute;
   top: 55%;
   transform: translate(-50%,-50%);
@@ -46,13 +46,19 @@
   text-align: center;
   border-radius: 20px;
 
+  a {
+    position: absolute;
+    right: 2%;
+    bottom: 7%;
+  }
+
   &__title {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   &__form {
     font-size: 20px;
-    margin: 40px auto;
+    margin: 20px auto;
     line-height: 50px;
     width: 60%;
     text-align: left;
@@ -85,7 +91,7 @@
   color: rgb(0, 0, 0);
 }
 
-.title, .purpose, .departure, .destination, .people, .conditions {
+.title, .purpose, .departure, .destination, .people, .conditions, .restriction, .start, .transportation {
   font-size: 18px;
   font-weight: 400;
   cursor: text;
@@ -106,6 +112,18 @@
 
 .destination {
   margin-left: 84px;
+}
+
+.restriction {
+  margin-left: 104px;
+}
+
+.start {
+  margin-left: 83px;
+}
+
+.transportation {
+  margin-left: 60px;
 }
 
 .people {
