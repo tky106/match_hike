@@ -6,8 +6,10 @@ unless Rails.env.development? || Rails.env.test?
       aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
       region: 'ap-northeast-1'
     }
-
-    config.fog_directory  = 'rails-photo-123'
-    config.cache_storage = :fog
+    when 'production'
+      config.fog_directory  = 'match-hike'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/match-hike'
+      config.cache_storage = :fog
+    end  
   end
 end
