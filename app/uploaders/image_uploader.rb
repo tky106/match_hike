@@ -1,5 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
+  process :resize_to_limit => [300, 300]
 
   if Rails.env.development?
     storage :file
@@ -23,8 +24,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
-
-  process :resize_to_limit => [100, 100]
 
   version :thumb do
     process resize_to_fill: [100, 100]
