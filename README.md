@@ -31,17 +31,17 @@
 # 本番環境
   http://54.150.247.16/
 # DEMO
-  ##トップ画面  
+  ## トップ画面  
   ![GIF home](https://user-images.githubusercontent.com/55785728/83902477-684d0600-a797-11ea-9864-44ec73674e0b.gif)  
-  ##ログイン  
+  ## ログイン  
   ![GIF login1](https://user-images.githubusercontent.com/55785728/83904803-80bf1f80-a79b-11ea-8dcf-6c6e77114df0.gif)  
-  ##投稿する  
+  ## 投稿する  
   ![GIF post](https://user-images.githubusercontent.com/55785728/83904871-9fbdb180-a79b-11ea-9cf2-aa7f1f930165.gif)  
-  ##投稿を探して応募する  
+  ## 投稿を探して応募する  
   ![GIF recruit](https://user-images.githubusercontent.com/55785728/83904940-c380f780-a79b-11ea-8123-0f40b3b9b10d.gif)  
-  ##グループで会話する  
+  ## グループで会話する  
   ![GIF talk](https://user-images.githubusercontent.com/55785728/83904964-cc71c900-a79b-11ea-8604-2299c124fc42.gif)  
-  ##キーワード検索で投稿を見つける  
+  ## キーワード検索で投稿を見つける  
   ![GIF search](https://user-images.githubusercontent.com/55785728/83904982-d3004080-a79b-11ea-8234-20f70e51fa64.gif)  
 
 # 工夫したポイント
