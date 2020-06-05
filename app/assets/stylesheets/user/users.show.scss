@@ -10,6 +10,18 @@
     top: 80%;
     right: 5%;
   }
+
+  &--login {
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgba(0,0,0,0);
+    -webkit-background-clip: text;
+    background-image: url("login1.jpg");
+    padding-top: 9%;
+    font-size: 250px;
+    height: 40vh;
+    font-weight: 900;
+  }
 }
 
 .pro-top-content-upload {

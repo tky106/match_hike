@@ -1,12 +1,16 @@
-h2
-  | Log in
-= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .form-inputs
-    = f.input :name
-    = f.input :email
-    = f.input :password
-    = f.input :password_confirmation
-    = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-  .form-actions
-    = f.button :submit, "Log in"
-= render "users/shared/links"
+.l-container
+  = render "/shared/header"
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .pro-top.pro-top--login
+      h2 Login Form
+      = f.submit class: "btn pro-top__edit"
+      .pro-top-content
+    .pro-disc-content.pro-disc-login-content
+      .pro-disc-content__one
+        = f.input :name, input_html: { class: 'pro-status pro-status__two' }
+      .pro-disc-content__one
+        = f.input :email, input_html: { class: 'pro-status pro-status__seven' }   
+      .pro-disc-content__one
+        = f.input :password, input_html: { class: 'pro-status pro-status__five' }
+      .pro-disc-content__one
+        = f.input :password_confirmation, input_html: { class: 'pro-status pro-status__eight' }
