@@ -31,7 +31,7 @@
 # 本番環境
   http://54.150.247.16/
 # DEMO
-  (https://user-images.githubusercontent.com/55785728/83902477-684d0600-a797-11ea-9864-44ec73674e0b.gif)
+  ![GIF home](https://user-images.githubusercontent.com/55785728/83902477-684d0600-a797-11ea-9864-44ec73674e0b.gif)  
 # 工夫したポイント
   ・ユーザーが応募したあと、同乗者のことを互いに知る機会を与えるためにトークグループを設けた。  
   ・ホストの信頼性を保つためにsnsリンクや性別、職業など詳細な個人情報を追加した。  
