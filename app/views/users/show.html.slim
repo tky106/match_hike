@@ -2,6 +2,7 @@
   = render "/shared/header"
   .pro-top
     = link_to "編集する", edit_user_registration_path(@user), class: "btn pro-top__edit"
+    = link_to "自分の投稿一覧", list_user_path(@user), class: "btn pro-top__list"
     .pro-top-content
       = image_tag "#{@user.image}", class: "pro-image"
       .pro-top-content__name

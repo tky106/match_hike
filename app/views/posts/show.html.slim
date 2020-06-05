@@ -27,4 +27,5 @@
               = f.submit "応募する", class: "btn"
           - elsif @post.contributor.id == current_user.id  
             .s-btn
-              = link_to "edit", edit_post_path, class: "btn"
+              = link_to "編集する", edit_post_path, class: "btn edit-btn"
+              = link_to "トーク画面へ行く", post_talks_path(@post), class: "btn delete-btn"

@@ -1,10 +1,9 @@
 .l-container
   = render "shared/header"
-  .m-container.m-container--recruit
-    h2 Recruitment
-    p 希望にあった募集を見つけよう
+  .list-container
+    h1 = "#{current_user.name}さんの投稿一覧"
   .contents.contents--index
-    - @posts.each do |post|
+    - @lists.each do |post|
       .p-content
         .p-content__title
           = image_tag "#{post.contributor.image}", class: "pu_image"
