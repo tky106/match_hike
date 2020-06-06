@@ -17,6 +17,14 @@
   ・応募機能  
   ・チャット機能  
   ・投稿検索機能  
+# ログインユーザー
+  各ユーザーのemail first_name@gmail.com  
+  各ユーザーのpassword aaaaaaa  
+  ＜例＞  
+  ・*ホスト*  
+  name 島田光輝 email koki@gmail.com password aaaaaaa  
+  ・*応募者*  
+  name 川島充 email mitsuru@gmail.com password aaaaaaa  
 # 使用技術
   ・インフラ: AWS  
   ・データベース: Mysql  
