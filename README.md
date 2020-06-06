@@ -17,6 +17,19 @@
   ・応募機能  
   ・チャット機能  
   ・投稿検索機能  
+# 使用技術
+  ・インフラ: AWS  
+  ・データベース: Mysql  
+  ・セッション管理: CookieStore  
+  ・バージョン管理: git github  
+  ・画像アップロード: CarrierWave  
+  ・DBスキーマ管理ツール: ridgepole  
+  ・テンプレートエンジン: slim  
+  ・ストレージサービス: S3  
+  ・翻訳ライブラリ: rails-i18n  
+  ・オープンソースソフトウェア: docker  
+# 本番環境
+  http://54.150.247.16/  
 # テストアカウント
   #### Login画面にも記載しています  
   各ユーザーのemail: first_name@gmail.com  
@@ -30,19 +43,6 @@
   name: 川島充  
   email: mitsuru@gmail.com  
   password: aaaaaaa  
-# 使用技術
-  ・インフラ: AWS  
-  ・データベース: Mysql  
-  ・セッション管理: CookieStore  
-  ・バージョン管理: git github  
-  ・画像アップロード: CarrierWave  
-  ・DBスキーマ管理ツール: ridgepole  
-  ・テンプレートエンジン: slim  
-  ・ストレージサービス: S3  
-  ・翻訳ライブラリ: rails-i18n  
-  ・オープンソースソフトウェア: docker  
-# 本番環境
-  http://54.150.247.16/
 # DEMO
   #### トップ画面  
   ![GIF home](https://user-images.githubusercontent.com/55785728/83902477-684d0600-a797-11ea-9864-44ec73674e0b.gif)  
