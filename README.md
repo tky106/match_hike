@@ -18,7 +18,7 @@
   ・チャット機能  
   ・投稿検索機能  
 # テストアカウント
-  ####Login画面にも記載しています
+  #### Login画面にも記載しています  
   各ユーザーのemail: first_name@gmail.com  
   各ユーザーのpassword: aaaaaaa  
   <例>  
