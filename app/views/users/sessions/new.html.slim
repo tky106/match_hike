@@ -3,7 +3,20 @@
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .pro-top.pro-top--login
       h2 Login Form
-      = f.submit class: "btn pro-top__edit"
+    .pro-top--disc
+      p 各ユーザーのemail: first_name@gmail.com <br>
+        各ユーザーのpassword: aaaaaaa <br>  
+    .pro-top--example
+      p （例） <br>
+      p ・ホスト <br>  
+          name: 島田光輝 <br>  
+          email: koki@gmail.com <br>  
+          password: aaaaaaa <br>
+      p ・応募者 <br>  
+          name: 川島充 <br>  
+          email: mitsuru@gmail.com <br>  
+          password: aaaaaaa <br>  
+      = f.submit class: "btn pro-top__login"
       .pro-top-content
     .pro-disc-content.pro-disc-login-content
       .pro-disc-content__one

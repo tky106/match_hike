@@ -11,6 +11,12 @@
     right: 5%;
   }
 
+  &__login {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+  }
+
   &__list {
     position: absolute;
     top: 70%;
@@ -27,6 +33,20 @@
     font-size: 250px;
     height: 40vh;
     font-weight: 900;
+  }
+
+  &--disc {
+    text-align: left;
+    margin-left: 40%
+  }
+
+  &--example {
+    display: flex;
+    margin-left: 34%;
+    margin-top: 10px;
+    p {
+      margin-left: 20px;
+    }
   }
 }
 
