@@ -37,12 +37,18 @@
 
   &--disc {
     text-align: left;
-    margin-left: 40%
+    margin-left: 38%;
+    
+    h1 {
+      font-size: 25px;
+      padding-bottom: 20px;
+      margin-left: 80px;
+    }
   }
 
   &--example {
     display: flex;
-    margin-left: 34%;
+    margin-left: 32%;
     margin-top: 10px;
     p {
       margin-left: 20px;
