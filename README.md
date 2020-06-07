@@ -45,7 +45,7 @@
   password: aaaaaaa  
 # DEMO
   #### トップ画面  
-  ![GIF home](https://user-images.githubusercontent.com/55785728/83902477-684d0600-a797-11ea-9864-44ec73674e0b.gif)  
+  ![GIF home2](https://user-images.githubusercontent.com/55785728/83967763-59816300-a8ff-11ea-9fd0-0c12e6673bcd.gif)  
   #### ログイン  
   ![GIF login1](https://user-images.githubusercontent.com/55785728/83904803-80bf1f80-a79b-11ea-8dcf-6c6e77114df0.gif)  
   #### 投稿する  
